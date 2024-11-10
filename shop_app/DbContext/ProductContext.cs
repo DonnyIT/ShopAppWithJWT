@@ -13,5 +13,6 @@ public class ProductContext : DbContext
 
     // Свойство для доступа к таблице продуктов в базе данных
     public DbSet<Product> Products { get; set; }
+    public DbSet<Order> Orders { get; set; }
 }
 

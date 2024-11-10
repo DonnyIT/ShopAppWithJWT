@@ -1,6 +1,31 @@
-﻿@{
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model shop_app.Models.Product
+@{
     ViewData["Title"] = "Details";
     Layout = "_Layout";
 }
 
 <h2>Details Page</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Name</td>
+            <td>@Model.Price</td>
+            <td>@Model.Description</td>
+            <td>
+                <a asp-controler ="Product" asp-action="Read" class="btn btn-primary">Read</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
